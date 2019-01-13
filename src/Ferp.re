@@ -1,6 +1,6 @@
 /* See https://bucklescript.github.io/docs/en/bind-to-global-values */
 
-[@bs.send]
+[@bs.module "ferp"]
 external app: (~init: 'a, ~update: 'b, ~subscribe: 'c, unit, unit) => unit =
   "";
 
@@ -38,7 +38,7 @@ module Effects = {
   };
 };
 
-[@bs.val] external effects: Effects.t('a, 'b) = "";
+[@bs.module "ferp"] external effects: Effects.t('a, 'b) = "";
 
 module Every = {
   type t;
@@ -48,7 +48,7 @@ module Subscriptions = {
   type t = {every: Every.t};
 };
 
-[@bs.val] external subscriptions: Subscriptions.t = "";
+[@bs.module "ferp"] external subscriptions: Subscriptions.t = "";
 
 module Util = {
   type t('a, 'b) = {
@@ -57,4 +57,4 @@ module Util = {
   };
 };
 
-[@bs.val] external util: Util.t('a, 'b) = "";
+[@bs.module "ferp"] external util: Util.t('a, 'b) = "";

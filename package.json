@@ -9,20 +9,34 @@
   },
   "keywords": [
     "BuckleScript",
-    "atama",
-    "proxy",
-    "state"
+    "ferp",
+    "hyperapp",
+    "ui",
+    "web"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/kristianmandrup/bs-ferp.git"
+  },
+  "homepage": "https://gitlab.com/kristianmandrup/bs-ferp",
+  "bugs": {
+    "url": "https://gitlab.com/kristianmandrup/bs-ferp/issues"
+  },
   "files": [
     "src/Ferp.re",
     "bsconfig.json"
   ],
   "author": "Kristian Mandrup <kmandrup@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "bs-platform": "^4.0.18"
-  },
-  "dependencies": {
+  "peerDependencies": {
     "ferp": "^1.1.0"
+  },
+  "devDependencies": {
+    "bs-platform": "^4.0.18",
+    "jest": "^23.6.0",
+    "@glennsl/bs-jest": "^0.4.6"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
